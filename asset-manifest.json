@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Docnep/UI/static/css/main.51cf8da2.css",
+    "main.js": "/Docnep/UI/static/js/main.c5684db5.js",
+    "static/js/453.4695a652.chunk.js": "/Docnep/UI/static/js/453.4695a652.chunk.js",
+    "static/media/Final Logo_DOCnep.png": "/Docnep/UI/static/media/Final Logo_DOCnep.c957293a5984018b80d7.png",
+    "static/media/499@2x.webp": "/Docnep/UI/static/media/499@2x.3d4932a530f50e5d31b0.webp",
+    "static/media/405@2x.webp": "/Docnep/UI/static/media/405@2x.a13672a5640bff56d900.webp",
+    "static/media/218@2x.webp": "/Docnep/UI/static/media/218@2x.e9c1046f7ba5221220e6.webp",
+    "static/media/454@2x.webp": "/Docnep/UI/static/media/454@2x.1b43a76c39bf673e90bc.webp",
+    "static/media/219@2x.webp": "/Docnep/UI/static/media/219@2x.33ac30a46205316254d0.webp",
+    "static/media/247@2x.webp": "/Docnep/UI/static/media/247@2x.0a1ae3a38578785fc670.webp",
+    "static/media/385@2x.webp": "/Docnep/UI/static/media/385@2x.34a861d6256703559006.webp",
+    "static/media/192@2x.webp": "/Docnep/UI/static/media/192@2x.20f10336f3c8d03857c4.webp",
+    "static/media/193@2x.webp": "/Docnep/UI/static/media/193@2x.1dcffdc985436181e7cc.webp",
+    "static/media/400@2x.webp": "/Docnep/UI/static/media/400@2x.d726de3cd2c09307fd5f.webp",
+    "static/media/591.webp": "/Docnep/UI/static/media/591.64c019727a21d79d49b5.webp",
+    "static/media/590.webp": "/Docnep/UI/static/media/590.2df0e74594f4fd6c87e6.webp",
+    "static/media/588.webp": "/Docnep/UI/static/media/588.8b251a46a062dcd6e5f1.webp",
+    "static/media/589.webp": "/Docnep/UI/static/media/589.1c57e8c1fb6662cffe66.webp",
+    "static/media/498@2x.webp": "/Docnep/UI/static/media/498@2x.181b54ad9936bf813820.webp",
+    "static/media/500@2x.webp": "/Docnep/UI/static/media/500@2x.038498f8de2190cfa088.webp",
+    "static/media/402@2x.webp": "/Docnep/UI/static/media/402@2x.af7d41f7c25b0596b2ab.webp",
+    "static/media/455@2x.webp": "/Docnep/UI/static/media/455@2x.50294c024adc85170260.webp",
+    "static/media/195@2x.webp": "/Docnep/UI/static/media/195@2x.29dc2f83bc615a1b9a3a.webp",
+    "static/media/248.webp": "/Docnep/UI/static/media/248.b924998e35372263e6b7.webp",
+    "static/media/slick.svg": "/Docnep/UI/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Docnep/UI/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Docnep/UI/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Docnep/UI/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Docnep/UI/index.html",
+    "main.51cf8da2.css.map": "/Docnep/UI/static/css/main.51cf8da2.css.map",
+    "main.c5684db5.js.map": "/Docnep/UI/static/js/main.c5684db5.js.map",
+    "453.4695a652.chunk.js.map": "/Docnep/UI/static/js/453.4695a652.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51cf8da2.css",
+    "static/js/main.c5684db5.js"
+  ]
+}
