@@ -1,0 +1,39 @@
+.footer {
+    background-color: #791B37;
+    border-bottom: 2px solid #fff;
+}
+
+.footer-section  {
+    margin: auto;
+    max-width: 1270px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    padding: 80px 10px 40px 10px;
+}
+
+.footer-logo {
+    color: rgb(236, 64, 122);
+    font-size: 30px;
+}
+
+.footer-services h2 {
+    font-size: 25px;
+}
+.footer-services h2,.f-links {
+    color: #fff;
+}
+
+.footer-links, .footer-caption,.footer-sec{
+    display: flex;
+    flex-direction: column;   
+    gap: 4px;
+}
+
+.footer-caption,.footer-sec, .footer-logo {
+    margin-top: 40px;
+}
+
+.footer-links {
+    margin-top: 15px ;
+
+}

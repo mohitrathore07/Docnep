@@ -1,0 +1,40 @@
+.home1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.home1_right {
+    margin-left: 5px;
+}
+
+.home1_left {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #333333;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+}
+
+.homeend2 {
+    display: block;
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #33333350;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+    word-spacing: 8px;
+    text-align: justify;
+}

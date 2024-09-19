@@ -1,0 +1,95 @@
+.showdoctor-container {
+  height: 850px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.show-doctor {
+  height: 950px;
+  width: 100%;
+  display: flex;
+  padding-left:20px ;
+}
+
+.slick-prev {
+  position: relative;
+  left: 15px !important;
+  z-index: 999;
+}
+
+.slick-next {
+  position: relative;
+  right: 15px !important;
+  z-index: 999;
+}
+
+.slick-next,
+.slick-prev {
+  background-color: transparent !important;
+  position: absolute;
+  top: 50%;
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+  color: black !important;
+}
+
+.dr-name,
+.dr-details {
+  margin: 8px 5px;
+  background-color: transparent;
+  font-family:'xr5_Raleway Bold';
+}
+
+.dr-name,
+.dr-details,
+.dr-specialization {
+  font-family:'xr5_Raleway Bold';
+}
+
+.dr-name {
+    margin: 35px 5px;
+    font-size: 1.9rem;
+}
+
+.dr-details {
+  color: #71717ab3;
+  font-size: 1.1rem;
+}
+
+.dr-specialization {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin:15px 5px;
+  color: black;
+}
+
+.btn-doctor {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.show-doctor-btn {
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 14px;
+  color: #fff;
+    padding: 10px 30px;
+    border: solid #ba2264 2px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;  
+    border-radius: 50px;
+    transition: all ease-in-out 0.8s;
+    background-color: #ba2264;
+}
+
+.show-doctor-btn:hover {
+  background-color: transparent;
+  color: #ba2264;
+}
+
+.show-doctor-content {
+  height: 240px;
+}

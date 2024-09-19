@@ -1,0 +1,47 @@
+.OurDoctor-container {
+    width: 75%;
+    height: 800px;
+    margin:50px auto;
+  }
+  
+  .our-doctor-heading {
+    display: flex ;
+    justify-content: space-between;
+    margin: 0px 0px 20px 25px;
+  }
+  
+  .our-doctor-filtersection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+  }
+  
+  
+  .get-appointment-show-doctor-content {
+    margin: 15px 0;
+    height: 200px;
+    width: 350px;
+  }
+  
+  
+  .getA-doctor-details {
+    font-family: 'Raleway';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20.33px;
+      text-decoration: none;
+      font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+      text-transform: none;
+      color: #333333;
+      background-color: Transparent;
+      -webkit-text-stroke: 0px black;
+      letter-spacing: 0em;
+      line-height: 35px;
+  }
+  
+  .getA-drName {
+    font-weight: bold;
+  }
+  
+  

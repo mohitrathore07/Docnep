@@ -1,0 +1,29 @@
+.slider-container {
+    width: 100%;  
+}
+
+.carousel-img-container {
+    width: 100%;
+    height: 70%;
+}
+
+.slick-prev {
+    position: relative;
+    left: 15px !important; 
+    z-index: 999;
+}
+
+.slick-next {
+    position: relative;
+    right: 15px !important; 
+    z-index: 999;
+}
+
+.slick-next,.slick-prev {
+    background-color: transparent !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px !important;
+    color: black !important;
+}

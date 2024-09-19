@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.container_register {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    max-width: 800px;
+    margin:100px auto;
+}
+
+.container_register .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container_register .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input,
+.user-details .input-box select,
+.user-details .input-box textarea {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.user-details .input-box textarea {
+    resize: none;
+    height: 100px;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid,
+.user-details .input-box select:focus,
+.user-details .input-box select:valid,
+.user-details .input-box textarea:focus,
+.user-details .input-box textarea:valid {
+    border-color: #9b59b6;
+}
+
+form .gender-details {
+    margin: 20px 0;
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .category {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .dot.one,
+#dot-2:checked ~ .dot.two {
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+@media (max-width: 768px) {
+    form .user-details .input-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 459px) {
+    .container_register {
+        padding: 20px;
+    }
+    form .category {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,59 @@
+.Appointment-main {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.appointment-img-content {
+    position: absolute;
+    top: 20%;
+    left: 11%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.ac-first {
+    font-family: 'xr5_Raleway Bold';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #C53A63;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+}
+
+
+.appointment-form {
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+.appointment-content {
+    font-family: 'xr5_Raleway Bold';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 24px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #C53A63;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+}
+
+.appointment-details {
+    margin:30px 50px ;
+    width: 100%;
+}
+
+.appointment-details-content {
+    width: 50%;
+    margin: auto;
+}

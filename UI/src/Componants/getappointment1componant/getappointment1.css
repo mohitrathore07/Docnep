@@ -1,0 +1,63 @@
+.get-appointment-1 {
+    height: 770px;
+    width: 100%;
+    background-color: red;
+    position: relative;
+}
+
+
+.get-appointment-1-content {
+    position: absolute;
+    top: 22%;
+    left: 8%;
+}
+
+.get-appointment-1-content-1 { 
+font-family: Times New Roman;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 28px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #C53A63;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+
+
+}
+
+.get-appointment-1-content-2 { 
+    font-family: Times New Roman;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 46px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #C53A63;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+    margin:10px 0 ;
+    line-height: 90px;
+}
+
+
+.get-appointment-1-content-4 {
+    margin: 50px 0;
+}
+
+.get-appointment-1-content-5 { 
+    font-family: Times New Roman;
+    font-style: normal;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #C53A63;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+    font-weight:bold     ;
+}

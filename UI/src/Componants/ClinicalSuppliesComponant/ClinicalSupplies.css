@@ -1,0 +1,29 @@
+.clinical-supplies-main {
+    width: 100%;
+    height: 780px;
+}
+
+.clinical-supplies-main-content {
+    position: relative;
+    top: -75%;
+    left: 10%;
+    width: 600px;   
+}
+
+.clinical-products-filter {
+    margin: 50px;
+    background-color: #E3E2DF;
+    height: 30px;
+    padding: 40px;
+    width: 80%;
+    margin:50px auto    ;
+}
+
+
+.products {
+    margin:30px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 50px;
+}

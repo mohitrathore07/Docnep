@@ -1,0 +1,42 @@
+.madicine-uses-main {
+    padding-top: 150px;
+    width:85%;
+    margin: auto;
+}
+
+.madicine-uses-main-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.main-home-heading {
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 42.44px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #333333;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+
+}
+
+.main-home-content {
+    margin-top: 20px;
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20.22px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
+    color: #333333;
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+    line-height: 30px;
+}
