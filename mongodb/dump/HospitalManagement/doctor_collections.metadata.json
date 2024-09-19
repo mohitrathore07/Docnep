@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"DrEmail":{"$numberInt":"1"}},"name":"DrEmail_1","background":true,"unique":true}],"uuid":"aa3be194cee0414197c0a4e18cfe1e2c","collectionName":"doctor_collections","type":"collection"}
