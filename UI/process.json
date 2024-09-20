@@ -1,0 +1,14 @@
+{
+    "apps": [
+      {
+        "name": "docnep",
+        "script": "npm",
+        "args": "start build",
+        "cwd": "/root/Docnep/UI",  
+        "watch": false,
+        "env": {
+          "PORT": 3000
+        }
+      }
+    ]
+  }
