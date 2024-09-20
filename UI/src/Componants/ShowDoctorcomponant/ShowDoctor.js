@@ -75,7 +75,7 @@ const ShowDoctor = () => {
       <div className="showdoctor-container">
         <Slider {...settings}>
           {
-            DrDetails.map((row)=>{
+            (DrDetails || []).map((row)=>{
               return ( 
             <div style = {{backgroundColor:'red'}} className="show-doctor">
                   <img src={`../assets/uploads/doctorimage/${row.Driconnm}`} style={imgstyle}></img>
