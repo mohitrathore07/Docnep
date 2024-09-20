@@ -5,10 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './showdisease.css';
 import { Link } from "react-router-dom";
-
 import { _adddiseaseapiurl } from "../../Api.url";
 
-function  Arrow (props) {
+function Arrow(props) {
   const { className, style, onClick } = props;
 
   return (
@@ -21,17 +20,25 @@ function  Arrow (props) {
 }
 
 const ShowDisease = () => {
-  const [ DiseaseDetails , setDiseaseDetails] = useState([]);
+  const [DiseaseDetails, setDiseaseDetails] = useState([]);
 
-  useEffect(()=>{
-    axios.get(_adddiseaseapiurl + "fetch").then((response)=>{
-      setDiseaseDetails(response.data);
-    }).catch((error)=>{
-      setDiseaseDetails('no content');
-    })
-  },[]);
+  useEffect(() => {
+    axios.get(_adddiseaseapiurl + "fetch")
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+          setDiseaseDetails(response.data);
+        } else {
+          console.error("Unexpected response data:", response.data);
+          setDiseaseDetails([]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching disease details:", error);
+        setDiseaseDetails([]);
+      });
+  }, []);
 
-  var settings = {
+  const settings = {
     dots: true,
     infinite: DiseaseDetails.length > 1,
     autoplay: true,
@@ -39,9 +46,6 @@ const ShowDisease = () => {
     slidesToShow: Math.min(3, DiseaseDetails.length),
     slidesToScroll: 1,
     initialSlide: 0,
-    // nextArrow: <Arrow   className="slick-nextD" />,
-    // prevArrow: <Arrow className="slick-prevD" />,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -67,35 +71,30 @@ const ShowDisease = () => {
     width: "85%",
     height: "350px",
     objectFit: "content",
-
   };
 
   return (
     <>
       <div className="showdisease-container">
         <Slider {...settings}>
-          {
-            DiseaseDetails.map((row)=>{
-              return ( 
-            <div style = {{backgroundColor:'red'}} className="show-disease">
-
-                <img src={`../assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle}></img>
-
+          {DiseaseDetails.length > 0 ? (
+            DiseaseDetails.map((row, index) => (
+              <div key={index} style={{ backgroundColor: 'red' }} className="show-disease">
+                <img src={`../assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" />
                 <div className="show-disease-content">
-
                   <h2 className="dr-name">{row.DiseaseName}</h2>
-                  <p className="dr-details">Detials: {row.Details}</p>
-
+                  <p className="dr-details">Details: {row.Details}</p>
                 </div>
-
                 <div className="btn-doctor">
-                <Link to='/getappointment'>
-                  <button className="show-doctor-btn">Book Appointment</button>
+                  <Link to='/getappointment'>
+                    <button className="show-doctor-btn">Book Appointment</button>
                   </Link>
                 </div>
-            </div>
-            )})
-          }
+              </div>
+            ))
+          ) : (
+            <p>No disease details available.</p>
+          )}
         </Slider>
       </div>
     </>
