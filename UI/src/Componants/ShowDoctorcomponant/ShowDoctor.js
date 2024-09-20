@@ -74,7 +74,7 @@ const ShowDoctor = () => {
     <>
       <div className="showdoctor-container">
         <Slider {...settings}>
-          {
+          {/* {
             (DrDetails || []).map((row)=>{
               return ( 
             <div style = {{backgroundColor:'red'}} className="show-doctor">
@@ -98,7 +98,7 @@ const ShowDoctor = () => {
                 </div>
             </div>
             )})
-          }
+          } */}
         </Slider>
       </div>
     </>
