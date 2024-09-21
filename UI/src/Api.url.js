@@ -1,4 +1,4 @@
-export  const _userapiurl = "http://localhost:3001:3001/user/";
+export  const _userapiurl = "http://localhost:3001/user/";
 
 export const _adddoctorapiurl = "http://localhost:3001/adddoctor/";
 
