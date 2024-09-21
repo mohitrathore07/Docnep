@@ -1,4 +1,4 @@
-export  const _userapiurl = "https://docnep.com/user/login";
+export  const _userapiurl = "https://docnep.com/user/";
 
 export const _adddoctorapiurl = "http://localhost:3001/adddoctor/";
 
