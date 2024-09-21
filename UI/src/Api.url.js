@@ -1,18 +1,33 @@
-export  const _userapiurl = "http://localhost:3001/user/";
+// export  const _userapiurl = "http://localhost:3001/user/";
 
-export const _adddoctorapiurl = "http://localhost:3001/adddoctor/";
+// export const _adddoctorapiurl = "http://localhost:3001/adddoctor/";
 
-export const _adddiseaseapiurl = "http://localhost:3001/adddisease/";
+// export const _adddiseaseapiurl = "http://localhost:3001/adddisease/";
 
-export const _addtestapiurl = "http://localhost:3001/addtests/";
+// export const _addtestapiurl = "http://localhost:3001/addtests/";
 
-export const _addpackageapiurl = "http://localhost:3001/addpackage/";
+// export const _addpackageapiurl = "http://localhost:3001/addpackage/";
 
-export const _addclinicalsuppliesapiurl = "http://localhost:3001/addclinicalsupplies/";
+// export const _addclinicalsuppliesapiurl = "http://localhost:3001/addclinicalsupplies/";
 
-export const _addcartapiurl = "http://localhost:3001/addcart/";
+// export const _addcartapiurl = "http://localhost:3001/addcart/";
 
-export const _addorderapiurl = "http://localhost:3001/addorders/";
+// export const _addorderapiurl = "http://localhost:3001/addorders/";
+export  const _userapiurl = "http://147.79.66.193:3001/user/";
+
+export const _adddoctorapiurl = "http://147.79.66.193:3001/adddoctor/";
+
+export const _adddiseaseapiurl = "http://147.79.66.193:3001/adddisease/";
+
+export const _addtestapiurl = "http://147.79.66.193:3001/addtests/";
+
+export const _addpackageapiurl = "http://147.79.66.193:3001/addpackage/";
+
+export const _addclinicalsuppliesapiurl = "http://147.79.66.1933001/addclinicalsupplies/";
+
+export const _addcartapiurl = "http://147.79.66.193:3001/addcart/";
+
+export const _addorderapiurl = "http://147.79.66.193:3001/addorders/";
 
 
 
