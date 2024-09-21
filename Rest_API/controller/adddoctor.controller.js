@@ -33,6 +33,7 @@ export const save = async (req, res) => {
 };
 
 export const fetch = async (req, res) => {
+  console.log('wroking');
   let condition_obj = url.parse(req.url, true).query;
   let usersList = await DoctorSchemaModel.find(condition_obj);
   if (usersList.length != 0) {
