@@ -15,12 +15,14 @@ import CartSection from './routes/cart.router.js';
 import Orders from './routes/order.router.js';
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json({ limit: '10mb' })); // Adjust as needed
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 app.use(fileUpload());
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://docnep.com'  // Allow requests from your frontend domain
+}));
 
 app.use("/user",Userrouter);
 app.use("/adddoctor",Doctorrouter);
