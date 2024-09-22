@@ -118,7 +118,7 @@ const ShowPackage = () => {
               return ( 
             <div style = {{backgroundColor:'red'}} className="show-disease">
 
-                <img src={`../assets/uploads/packageimages/${row.Packageiconnm}`} style={imgstyle}/>
+                <img src={`${process.env.PUBLIC_URL}/assets/uploads/packageimages/${row.Packageiconnm}`} style={imgstyle}/>
 
                 <div className="get-appointment-show-package-content">
 

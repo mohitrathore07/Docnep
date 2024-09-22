@@ -76,11 +76,16 @@ const ShowDisease = () => {
   return (
     <>
       <div className="showdisease-container">
+          
         <Slider {...settings}>
           {DiseaseDetails.length > 0 ? (
             DiseaseDetails.map((row, index) => (
               <div key={index} style={{ backgroundColor: 'red' }} className="show-disease">
-                <img src={`../assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" />
+
+                {/* <img src={`/assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" /> */}
+                <img src={`${process.env.PUBLIC_URL}/assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" />
+
+
                 <div className="show-disease-content">
                   <h2 className="dr-name">{row.DiseaseName}</h2>
                   <p className="dr-details">Details: {row.Details}</p>

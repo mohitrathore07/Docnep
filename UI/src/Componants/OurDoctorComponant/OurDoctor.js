@@ -117,7 +117,7 @@ const OurDoctors = () => {
               return ( 
             <div style = {{backgroundColor:'red'}} className="show-disease">
 
-                <img src={`../assets/uploads/doctorimage/${row.Driconnm}`} style={imgstyle}></img>
+                <img src={`${process.env.PUBLIC_URL}/assets/uploads/doctorimage/${row.Driconnm}`} style={imgstyle}></img>
 
                 <div className="get-appointment-show-doctor-content">
 

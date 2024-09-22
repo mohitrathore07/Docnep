@@ -129,7 +129,7 @@
                 return ( 
               <div style = {{backgroundColor:'red'}} className="show-disease">
 
-                  <img src={`../assets/uploads/testimages/${row.Testiconnm}`} style={imgstyle}/>
+                  <img src={`${process.env.PUBLIC_URL}/assets/uploads/testimages/${row.Testiconnm}`} style={imgstyle}/>
 
                   <div className="get-appointment-show-test-content">
 

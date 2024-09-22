@@ -113,7 +113,7 @@ const ClinicalSupplies = () => {
               return (
                 <div className="show-clinical-products" >
                   <img
-                    src={`../assets/uploads/suppliesimages/${row.Producticonnm}`}
+                    src={`${process.env.PUBLIC_URL}/assets/uploads/suppliesimages/${row.Producticonnm}`}
                     style={productimgstyle}
                   />
 

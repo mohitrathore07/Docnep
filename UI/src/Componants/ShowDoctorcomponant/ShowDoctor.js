@@ -78,7 +78,7 @@ const ShowDoctor = () => {
             DrDetails.map((row, index) => (
               <div key={index} style={{ backgroundColor: 'red' }} className="show-doctor">
                 <img 
-                  src={`../assets/uploads/doctorimage/${row.Driconnm}`} 
+                  src={`${process.env.PUBLIC_URL}/assets/uploads/doctorimage/${row.Driconnm}`} 
                   style={imgstyle} 
                   alt={`${row.DrName}'s profile`}
                 />
