@@ -6,14 +6,17 @@ import Logo from './Logo/Final Logo_DOCnep.png';
 
 const Footer = () => {
 
-  
+  const logostyle = {
+    width: '250px',
+    height: '250px'
+  }
   return (
     <>
       <footer className="footer">
         <div className="footer-section">
             
           <div className="footer-logo">
-            <img src={Logo} className="logostyle"/>
+            <img src={Logo} style={logostyle}/>
           </div>
           
           <div className="footer-services">

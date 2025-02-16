@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+// import Header from "../Headercomponant/header";
 import Header from "./Componants/Headercomponant/header.js";
 
 import AddDoctor from "./Componants/adddoctorscomponant/adddoctor.js";
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
       <Header />
-      <div style={{marginTop: '80px' , width: '100vw'}}>
+      <div>
 
         <Routes>
           <Route path="/" element={<Home />}></Route>

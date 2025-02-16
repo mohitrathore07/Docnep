@@ -1,114 +1,42 @@
 .madicine-uses-main {
     padding-top: 150px;
-    width: 90%; /* Adjusted for smaller screens */
-    max-width: 1200px; /* Limit maximum width */
+    width:85%;
     margin: auto;
-  }
-  
-  .madicine-uses-main-home {
+}
+
+.madicine-uses-main-home {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
-    gap: 40px; /* Adjusted gap for better spacing */
-  }
-  
-  .main-home-heading {
-    font-family: Arial, sans-serif;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.main-home-heading {
+    font-family: Arial;
     font-weight: bold;
-    font-size: 42px; /* Base font size for larger screens */
+    font-style: normal;
+    font-size: 42.44px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
     color: #333333;
-    margin-bottom: 20px; /* Add margin for better spacing */
-  }
-  
-  .main-home-content {
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+
+}
+
+.main-home-content {
     margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway';
     font-weight: normal;
-    font-size: 20px; /* Base font size for larger screens */
+    font-style: normal;
+    font-size: 20.22px;
+    text-decoration: none;
+    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
+    text-transform: none;
     color: #333333;
-    line-height: 30px; /* Adjusted line height */
-  }
-  
-  .btn-doctor {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .show-doctor-btn {
-    font-family: Roboto, sans-serif;
-    font-weight: 0;
-    font-size: 14px;
-    color: #fff;
-    padding: 10px 30px;
-    border: solid #ba2264 2px;
-    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-    border-radius: 50px;
-    transition: all ease-in-out 0.8s;
-    background-color: #ba2264;
-    cursor: pointer;
-  }
-  
-  .show-doctor-btn:hover {
-    background-color: transparent;
-    color: #ba2264;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .madicine-uses-main-home {
-      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-      gap: 30px; /* Adjusted gap */
-    }
-  
-    .main-home-heading {
-      font-size: 36px; /* Adjust font size for tablets */
-    }
-  
-    .main-home-content {
-      font-size: 18px; /* Adjust font size for tablets */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .madicine-uses-main {
-      padding-top: 100px; /* Adjust padding for smaller screens */
-    }
-  
-    .madicine-uses-main-home {
-      grid-template-columns: 1fr; /* Single column for mobile */
-      gap: 20px; /* Adjusted gap */
-    }
-  
-    .main-home-heading {
-      font-size: 28px; /* Adjust font size for mobile */
-    }
-  
-    .main-home-content {
-      font-size: 16px; /* Adjust font size for mobile */
-      line-height: 24px; /* Adjust line height */
-    }
-  
-    .show-doctor-btn {
-      font-size: 12px; /* Adjust button font size */
-      padding: 8px 20px; /* Adjust button padding */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .madicine-uses-main {
-      padding-top: 50px; /* Further reduce padding */
-    }
-  
-    .main-home-heading {
-      font-size: 24px; /* Adjust font size for very small screens */
-    }
-  
-    .main-home-content {
-      font-size: 14px; /* Adjust font size for very small screens */
-      line-height: 20px; /* Adjust line height */
-    }
-  
-    .show-doctor-btn {
-      font-size: 10px; /* Adjust button font size */
-      padding: 6px 16px; /* Adjust button padding */
-    }
-  }
+    background-color: Transparent;
+    -webkit-text-stroke: 0px black;
+    letter-spacing: 0em;
+    line-height: 30px;
+}

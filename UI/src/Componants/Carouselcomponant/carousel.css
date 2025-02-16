@@ -1,54 +1,29 @@
 .slider-container {
-    max-width: 92vw;
-    margin: auto;
-    overflow: hidden; /* Ensure no overflow issues */
+    width: 100%;  
 }
 
 .carousel-img-container {
     width: 100%;
-    height: auto; /* Let the height adjust based on the image aspect ratio */
-    aspect-ratio: 16 / 9; /* Set a default aspect ratio (adjust as needed) */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image fits inside the container without cropping */
-}
-
-.slick-prev,
-.slick-next {
-    position: absolute;
-    z-index: 999;
-    background-color: transparent !important;
+    height: 70%;
 }
 
 .slick-prev {
-    left: 15px !important; /* Adjust arrow positioning */
+    position: relative;
+    left: 15px !important; 
+    z-index: 999;
 }
 
 .slick-next {
-    right: 15px !important; /* Adjust arrow positioning */
+    position: relative;
+    right: 15px !important; 
+    z-index: 999;
 }
 
-.slick-prev:before,
-.slick-next:before {
+.slick-next,.slick-prev {
+    background-color: transparent !important;
+}
+
+.slick-prev:before, .slick-next:before {
     font-size: 30px !important;
-    color: black !important;
-}
-
-.slick-dots {
-    bottom: 20px; /* Position dots at the bottom */
-}
-
-.slick-dots li button:before {
-    font-size: 12px !important;
-    color: black !important;
-}
-
-.slick-dots li.slick-active button:before {
     color: black !important;
 }

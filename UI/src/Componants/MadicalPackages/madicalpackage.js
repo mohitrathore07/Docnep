@@ -51,7 +51,7 @@ const MadicalPackages = () => {
 
   return (
      <>
-     <div className='Show-all-page2-main' style={{paddingTop:'50px'}}>
+     <div className='Show-all-page2-main' style={{paddingTop:'150px'}}>
 
         <div className='Show-all-page2-filters'>
             <h2>Filters</h2>

@@ -3,17 +3,12 @@
     border-bottom: 2px solid #fff;
 }
 
-.footer-section {
+.footer-section  {
     margin: auto;
     max-width: 1270px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4 , 1fr);
     padding: 80px 10px 40px 10px;
-}
-
-.logostyle {
-    width: 180px;
-    height: 180px;
 }
 
 .footer-logo {
@@ -24,89 +19,21 @@
 .footer-services h2 {
     font-size: 25px;
 }
-
-.footer-services h2, .f-links {
+.footer-services h2,.f-links {
     color: #fff;
 }
 
-.footer-links, .footer-caption, .footer-sec {
+.footer-links, .footer-caption,.footer-sec{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;   
     gap: 4px;
 }
 
-.footer-caption, .footer-sec, .footer-logo {
+.footer-caption,.footer-sec, .footer-logo {
     margin-top: 40px;
 }
 
 .footer-links {
-    margin-top: 15px;
-}
+    margin-top: 15px ;
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .footer-section {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        padding: 60px 20px 30px 20px;
-    }
-
-    .footer-logo {
-        grid-column: span 2;
-        text-align: center;
-    }
-
-    .footer-services, .footer-sec, .footer-caption {
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-section {
-        grid-template-columns: 1fr;
-        padding: 40px 20px 20px 20px;
-    }
-
-    .footer-logo {
-        grid-column: span 1;
-        text-align: center;
-    }
-
-    .footer-services, .footer-sec, .footer-caption {
-        text-align: center;
-    }
-
-    .footer-links, .footer-caption, .footer-sec {
-        gap: 10px;
-    }
-
-    .footer-logo img {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-section {
-        padding: 30px 10px 15px 10px;
-    }
-
-    .logostyle  {
-        width: '200px';
-        height: '200px'
-    } 
-    
-
-    .footer-logo img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .footer-services h2 {
-        font-size: 20px;
-    }
-
-    .f-links {
-        font-size: 14px;
-    }
 }

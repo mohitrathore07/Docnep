@@ -10,11 +10,8 @@ const GetAppointment = () => {
     <>
     <div className='get-appointment-main'>
       <GetAppointment1/>
-        <div>
-          <OurDoctors/>
-          <br/>
-          <Diseases/>
-        </div>
+      <OurDoctors/>
+      <Diseases/>
     </div>
     </>
   )
