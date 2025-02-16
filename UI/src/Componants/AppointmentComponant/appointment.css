@@ -1,59 +1,172 @@
-.Appointment-main {
+/* General Styles */
+.appointment-container {
     width: 100%;
-    height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .appointment-hero {
     position: relative;
-}
-
-.appointment-img-content {
-    position: absolute;
-    top: 20%;
-    left: 11%;
+    height: 600px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.ac-first {
-    font-family: 'xr5_Raleway Bold';
-    font-weight: bold;
-    font-style: normal;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    overflow: hidden; /* Prevent image overflow */
+  }
+  
+  .appointment-hero-content {
+    max-width: 50%;
+    z-index: 2;
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  .appointment-hero-content h2 {
+    font-family: 'Raleway', sans-serif;
     font-size: 32px;
-    text-decoration: none;
-    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
-    text-transform: none;
-    color: #C53A63;
-    background-color: Transparent;
-    -webkit-text-stroke: 0px black;
-    letter-spacing: 0em;
-}
-
-
-.appointment-form {
-    width: 100%;
-    text-align: center;
-    height: auto;
-}
-
-.appointment-content {
-    font-family: 'xr5_Raleway Bold';
     font-weight: bold;
-    font-style: normal;
-    font-size: 24px;
-    text-decoration: none;
-    font-feature-settings: 'kern', 'liga' 0, 'clig' 0, 'calt' 0, 'titl' 0, 'salt' 0, 'swsh' 0, 'cswh' 0;
-    text-transform: none;
-    color: #C53A63;
-    background-color: Transparent;
-    -webkit-text-stroke: 0px black;
-    letter-spacing: 0em;
-}
-
-.appointment-details {
-    margin:30px 50px ;
-    width: 100%;
-}
-
-.appointment-details-content {
+    color: #c53a63;
+    margin-bottom: 20px;
+  }
+  
+  .appointment-hero-content p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .appointment-btn {
+    width: 240px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .appointment-hero-img {
     width: 50%;
-    margin: auto;
-}
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact centering */
+  }
+  
+  /* Calendly Widget */
+  .calendly-widget {
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  /* Appointment Form */
+  .appointment-form {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .appointment-form iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 520px;
+    border: none;
+  }
+  
+  /* Appointment Details */
+  .appointment-details {
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  .appointment-details-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-detail {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .payment-btn {
+    background-color: #c53a63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-btn:hover {
+    background-color: #a52e4f;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .appointment-hero {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 10px;
+    }
+  
+    .appointment-hero-content {
+      max-width: 100%;
+      text-align: center;
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .appointment-hero-img {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+      transform: none; /* Reset transform for mobile */
+    }
+  
+    .appointment-form iframe {
+      height: 400px;
+    }
+  
+    .appointment-details-card {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appointment-hero-content h2 {
+      font-size: 24px;
+    }
+  
+    .appointment-hero-content p {
+      font-size: 16px;
+    }
+  
+    .appointment-btn {
+      width: 200px;
+      height: 40px;
+    }
+  
+    .appointment-form iframe {
+      height: 300px;
+    }
+  
+    .appointment-detail {
+      font-size: 16px;
+    }
+  
+    .payment-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }

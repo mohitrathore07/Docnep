@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ClinicalSupplies.css";
 import img from "./img/385@2x.webp";
-import { _addclinicalsuppliesapiurl , _addcartapiurl } from "../../Api.url";
+import { _addclinicalsuppliesapiurl, _addcartapiurl } from "../../Api.url";
 import { useNavigate } from "react-router-dom";
 
 const ClinicalSupplies = () => {
@@ -13,12 +13,12 @@ const ClinicalSupplies = () => {
 
   useEffect(() => {
     axios.get(_addclinicalsuppliesapiurl + "fetch").then((response) => {
-        setProducts(response.data);
-        setFilteredDetails(response.data);
-      }).catch((error) => {
-        setProducts([]);
-        console.error(error);
-      });
+      setProducts(response.data);
+      setFilteredDetails(response.data);
+    }).catch((error) => {
+      setProducts([]);
+      console.error(error);
+    });
   }, []);
 
   useEffect(() => {
@@ -47,30 +47,26 @@ const ClinicalSupplies = () => {
   };
 
   const productimgstyle = {
-    width: "378px",
-    height: "350px",
-    objectFit: "content",
+    width: "100%", /* Ensure image scales properly */
+    height: "auto", /* Maintain aspect ratio */
   };
 
   const handleSubmit = (item) => {
-    const details = { ProductName: item.ProductName, _id: item._id, collection_name: item.collection_name, email : localStorage.getItem("email") };
-    axios.post(_addcartapiurl + "save" ,details).then((response)=>{
-    navigate('/cart');
-    }).catch((error)=>{
+    const details = { ProductName: item.ProductName, _id: item._id, collection_name: item.collection_name, email: localStorage.getItem("email") };
+    axios.post(_addcartapiurl + "save", details).then((response) => {
+      navigate('/cart');
+    }).catch((error) => {
       console.error(error);
-    })
-  }
+    });
+  };
 
   return (
     <>
-
-    <div className="clinical-supplies">
+      <div className="clinical-supplies">
         <div className="clinical-supplies-main">
           <img src={img} alt="img" style={imgstyle} />
           <div className="clinical-supplies-main-content">
-            <h3
-              style={{ color: "#fff", fontSize: "37px", marginBottom: "40px" }}
-            >
+            <h3 style={{ color: "#fff", fontSize: "37px", marginBottom: "40px" }}>
               <span style={spanstyle}>MEDICAL</span> INSTRUMENT ON RENT
             </h3>
             <h2 style={contentstyle}>
@@ -87,12 +83,10 @@ const ClinicalSupplies = () => {
         </div>
 
         <div className="clinical-products">
-
           <div className="our-doctor-filtersection clinical-products-filter">
-            
             <h1 style={{ color: "#EE4C7C" }}>Filter</h1>
             <select
-              class="form-control"
+              className="form-control"
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
               style={{ height: "40px", paddingLeft: "10px" }}
@@ -101,22 +95,19 @@ const ClinicalSupplies = () => {
               <option value="all">All</option>
               <option value="adl">adl</option>
               <option value="medical imaging">medical imaging</option>
-              <option value="emergency preparendness">
-                emergency preparendness
-              </option>
+              <option value="emergency preparendness">emergency preparendness</option>
             </select>
           </div>
 
           <div className="products">
-
             {filteredDetails.map((row) => {
               return (
-                <div className="show-clinical-products" >
+                <div className="show-clinical-products" key={row._id}>
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/uploads/suppliesimages/${row.Producticonnm}`}
                     style={productimgstyle}
+                    alt={row.ProductName}
                   />
-
                   <div className="get-appointment-show-test-content">
                     <h2 className="getA-doctor-details getA-drName">
                       {row.ProductName}:
@@ -128,7 +119,6 @@ const ClinicalSupplies = () => {
                       Details: {row.Details}
                     </p>
                   </div>
-
                   <div className="btn-doctor">
                     <button className="show-doctor-btn" onClick={() => handleSubmit(row)}>Book Now</button>
                   </div>
@@ -136,7 +126,7 @@ const ClinicalSupplies = () => {
               );
             })}
           </div>
-          </div>
+        </div>
       </div>
     </>
   );

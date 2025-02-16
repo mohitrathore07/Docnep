@@ -5,80 +5,68 @@ import img from "./img/400@2x.webp";
 import btn from "./img/402@2x.webp";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
-import FormfacadeEmbed from '@formfacade/embed-react'
 import { _adddoctorapiurl } from "../../Api.url";
 
 const Appointment = () => {
-    const params = useParams();
+  const { _id } = useParams();
+  const [drdetails, setDrDetails] = useState([]);
 
-    const [drdetails , setDrDetails] = useState([]);
-  const imgstyle = {
-    width: "100%",
-    height: "100%",
-    objectFit: "contain",
-  };
-
-  const btnstyle = {
-    width: '240px',
-    height: '50px'
-  }
-  
-  useEffect(()=>{
-    axios.get(_adddoctorapiurl+"fetch?_id="+params._id).then((response)=>{        
+  useEffect(() => {
+    axios
+      .get(`${_adddoctorapiurl}fetch?_id=${_id}`)
+      .then((response) => {
         setDrDetails(response.data);
-    }).catch((error)=>{
-        console.log(error);
-    })
-  },[]);
+      })
+      .catch((error) => {
+        console.error("Error fetching doctor details:", error);
+      });
+  }, [_id]);
 
   return (
-    <>
-      <div className="Appointment-main">
-        <div className="appointment-img-content">
-          <div className="ac-first">
-            <h2>Professional</h2>
-            <h2>Doctors are Waiting</h2>
-            <h2>to Help.</h2>
-          </div>
-
-          <div className="get-appointment-1-content-1">
-            <span style={{display:'block'}}>Experience the best consultation you </span>
-            <span>need for your body and mind.</span>
-          </div>
-
-          <div className="ac_img">
-            <img src={btn} style={btnstyle}/>
-          </div>
+    <div className="appointment-container">
+      <div className="appointment-hero">
+        <div className="appointment-hero-content">
+          <h2>Professional Doctors are Waiting to Help.</h2>
+          <p>
+            Experience the best consultation you need for your body and mind.
+          </p>
+          <img src={btn} alt="Appointment Button" className="appointment-btn" />
         </div>
-
-        <img src={img} style={imgstyle} />
+        <img src={img} alt="Appointment Hero" className="appointment-hero-img" />
       </div>
-      <div className="App">
+
+      <div className="calendly-widget">
         <InlineWidget url="https://calendly.com/mohitrathore8269" />
       </div>
 
       <div className="appointment-form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdoPna-4C8MSh1QXLQHAmaQOM11fxvYOcpmXvA18LrLb84hVg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdoPna-4C8MSh1QXLQHAmaQOM11fxvYOcpmXvA18LrLb84hVg/viewform?embedded=true"
+          width="700"
+          height="520"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          title="Appointment Form"
+        >
+          Loading…
+        </iframe>
       </div>
 
       <div className="appointment-details">
-        {
-          drdetails.map((row)=>{
-            return (
-              <div className="appointment-details-content">
-                <div className="appointment-content">Doctor Name: {row.DrName}</div>
-                <div className="appointment-content">Select Address:  {row.DrAddress}</div>
-
-                <div className="btn-doctor" >
-                  <button className="show-doctor-btn">Continue to Payment__</button>
-                </div>
-              </div>
-            )
-          })
-        }
+        {drdetails.map((row, index) => (
+          <div key={index} className="appointment-details-card">
+            <div className="appointment-detail">
+              <strong>Doctor Name:</strong> {row.DrName}
+            </div>
+            <div className="appointment-detail">
+              <strong>Select Address:</strong> {row.DrAddress}
+            </div>
+            <button className="payment-btn">Continue to Payment</button>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

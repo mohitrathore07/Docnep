@@ -1,5 +1,11 @@
 .home {
-    padding:0 10%;
     background-color:  #F6F5F3;
+    width: 80vw;
+    margin: auto;
+}
 
+@media (max-width: 576px) {
+    .home {
+        padding: 0;
+    }
 }
