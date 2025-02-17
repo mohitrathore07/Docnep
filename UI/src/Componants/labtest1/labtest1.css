@@ -1,11 +1,73 @@
 .labtest-1-main {
     width: 100%;
-    height: 700px;
+    height: 700px; /* Base height for larger screens */
     position: relative;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.labtest-1-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
 }
 
 .labtest-1-content {
     position: absolute;
-    top: 92%;
+    top: 90%; /* Adjust position for better placement */
     left: 10%;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 24px; /* Base font size for larger screens */
+    color: #C53A63;
+    background-color: rgba(255, 255, 255, 0.8); /* Add background for better readability */
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 5px; /* Add rounded corners */
+    text-align: center; /* Center align text */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .labtest-1-main {
+        height: 600px; /* Adjust height for medium screens */
+    }
+
+    .labtest-1-content {
+        font-size: 22px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 992px) {
+    .labtest-1-main {
+        height: 500px; /* Adjust height for smaller screens */
+    }
+
+    .labtest-1-content {
+        font-size: 20px; /* Adjust font size */
+        top: 88%; /* Adjust position */
+    }
+}
+
+@media (max-width: 768px) {
+    .labtest-1-main {
+        height: 400px; /* Adjust height for tablets */
+    }
+
+    .labtest-1-content {
+        font-size: 18px; /* Adjust font size */
+        top: 85%; /* Adjust position */
+        left: 5%; /* Adjust position */
+    }
+}
+
+@media (max-width: 576px) {
+    .labtest-1-main {
+        height: 300px; /* Adjust height for mobile screens */
+    }
+
+    .labtest-1-content {
+        font-size: 16px; /* Adjust font size */
+        top: 80%; /* Adjust position */
+        left: 5%; /* Adjust position */
+        padding: 8px 16px; /* Adjust padding */
+    }
 }

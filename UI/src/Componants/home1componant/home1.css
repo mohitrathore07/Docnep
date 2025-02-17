@@ -1,10 +1,81 @@
+/* Base styles */
 .home1 {
     width: 100%;
+    /* margin: auto; */
     display: flex;
     align-items: center;
-    justify-content: space-between;   
+    gap: 20px;
+    /* padding: 20px; */
+    box-sizing: border-box;
 }
 
+.home1_left,
 .home1_right {
-    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.home1_left img,
+.home1_right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.home1_left img:first-child {
+    /* margin-bottom: 20px; Space between Homeimg1 and Homebtn1 */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .home1_left img,
+    .home1_right img {
+        width: 90%; /* Reduce image size slightly */
+        height: auto;
+    }
+
+    .home1_left img:first-child {
+        margin-bottom: 15px; /* Adjust space between Homeimg1 and Homebtn1 */
+    }
+}
+
+@media (max-width: 992px) {
+    .home1_left img,
+    .home1_right img {
+        width: 80%; /* Further reduce image size */
+        height: auto;
+    }
+
+    .home1_left img:first-child {
+        margin-bottom: 10px; /* Adjust space between Homeimg1 and Homebtn1 */
+    }
+}
+
+@media (max-width: 768px) {
+    .home1_left img,
+    .home1_right img {
+        width: 70%; /* Reduce image size for tablets */
+        height: auto;
+    }
+
+    .home1_left img:first-child {
+        margin-bottom: 5px; /* Adjust space between Homeimg1 and Homebtn1 */
+    }
+}
+
+@media (max-width: 576px) {
+    .home1_left img,
+    .home1_right img {
+        width: 100%; /* Reduce image size for mobile */
+        height: auto;
+    }
+
+    .home1_left img:first-child {
+        margin-bottom: 5px; /* Adjust space between Homeimg1 and Homebtn1 */
+    }
+
+    .btnimg {
+        width: 200px !important;
+        height: 40;
+    }
 }

@@ -53,29 +53,26 @@
       slidesToShow: Math.min(3, filteredDetails.length),
       slidesToScroll: 1,
       initialSlide: 0,
-      // nextArrow: <Arrow   className="slick-nextD" />,
-      // prevArrow: <Arrow className="slick-prevD" />,
-
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: Math.min(2, filteredDetails.length),
+            slidesToShow: 2,
             slidesToScroll: 1,
-            infinite: filteredDetails.length > 1,
+            infinite: true,
             dots: true,
           },
         },
         {
-          breakpoint: 760,
+          breakpoint: 768,
           settings: {
-            slidesToShow: Math.min(1, filteredDetails.length),
+            slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 2,
+            initialSlide: 1,
           },
         },
       ],
-    }; 
+    };
 
     const imgstyle = {
       width: "378px",

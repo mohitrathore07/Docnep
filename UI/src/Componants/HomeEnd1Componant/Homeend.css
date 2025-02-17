@@ -1,11 +1,77 @@
+/* General Styles */
 .home1 {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;   
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center; /* Center content for smaller screens */
+  gap: 20px; /* Add spacing between elements */
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
+.home1_left,
 .home1_right {
-    margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.home1_img {
+  max-width: 90%; /* Ensure images don't overflow their containers */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.home1_button {
+  margin-top: 15px;
+  max-width: 100%; /* Ensure the button image is responsive */
+  height: auto;
+  cursor: pointer; /* Add pointer cursor for better UX */
+  transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.home1_button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .home1 {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 30px; /* Increase gap for better spacing */
+  }
+
+  .home1_left,
+  .home1_right {
+    width: 80%; /* Adjust width for tablets */
+  }
+
+  .home1_img {
+    width: 100%; /* Full width for tablets */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .home1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20px; /* Adjust gap for mobile */
+  }
+
+  .home1_left,
+  .home1_right {
+    width: 90%; /* Adjust width for mobile */
+  }
+
+  .home1_img {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .home1_button {
+    width: 150px; /* Adjust button size for mobile */
+  }
+}
