@@ -28,6 +28,7 @@ const Order = mongoose.Schema ({
         },
     }],
     totalAmount: String,
+    
     info: String 
 });
 

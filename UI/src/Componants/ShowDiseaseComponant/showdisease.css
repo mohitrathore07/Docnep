@@ -1,14 +1,15 @@
 .showdisease-container {
-  height: 650px;
   width: 100%;
   margin: 50px auto;
+  height: auto;
 }
 
 .show-disease {
-  height: 100%;
   width: 100%;
   display: flex;
   padding-left:20px ;
+  background-color: #fff;
+  /* height: 700px; */
 }
 
 .slick-prev {
@@ -51,7 +52,7 @@
 }
 
 .dr-name {
-    margin: 35px 5px;
+    margin: 10px 5px;
     font-size: 1.9rem;
 }
 
@@ -91,7 +92,7 @@
 }
 
 .show-disease-content {
-  height: 180px;
+  /* height: 150px; */
 }
 
 .slick-dots {

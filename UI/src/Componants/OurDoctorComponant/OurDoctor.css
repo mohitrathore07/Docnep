@@ -1,6 +1,7 @@
 /* General Styles */
 .OurDoctor-container {
   width: 90%; /* Adjusted for smaller screens */
+
   max-width: 1200px; /* Limit maximum width */
   margin: 50px auto;
   padding: 0 20px; /* Add padding for smaller screens */
@@ -75,6 +76,7 @@
 @media (max-width: 1024px) {
   .OurDoctor-container {
     width: 95%; /* Adjust width for tablets */
+    height: auto;
   }
 
   .our-doctor-heading {
@@ -90,12 +92,18 @@
   .getA-doctor-details {
     font-size: 16px; /* Adjust font size for tablets */
   }
+  .doctor-image {
+    height: 50%;
+    object-fit: contain;
+  }
 }
+
 
 @media (max-width: 768px) {
   .OurDoctor-container {
     width: 100%; /* Full width for smaller screens */
     padding: 0 10px; /* Reduce padding */
+    height: auto;
   }
 
   .our-doctor-heading {

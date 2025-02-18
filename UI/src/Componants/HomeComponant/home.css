@@ -4,8 +4,10 @@
     margin: auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
     .home {
         padding: 0;
+        margin: auto;   
+        width: 100vw ;
     }
 }

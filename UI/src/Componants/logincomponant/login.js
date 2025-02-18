@@ -42,9 +42,7 @@ function Login() {
         <div className="left-section">
           <h1>Help Us 24/7</h1>
           <h2>Welcome back</h2>
-          <p>
-            Sample text. Click to select the text box. Click again or double click to start editing the text.
-          </p>
+         
           <img
             src="https://media.licdn.com/dms/image/C5612AQHhvBAZjanbsg/article-cover_image-shrink_600_2000/0/1633674492707?e=2147483647&v=beta&t=p7r8zSfIqOD6yAuN5JwgGjXh9xZL45NCtNhDk05KoKs"
             alt="Rocket Launch"

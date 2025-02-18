@@ -48,7 +48,7 @@ const ClinicalSupplies = () => {
 
   const productimgstyle = {
     width: "100%", /* Ensure image scales properly */
-    height: "auto", /* Maintain aspect ratio */
+    height: "350px", /* Maintain aspect ratio */
   };
 
   const handleSubmit = (item) => {
@@ -120,7 +120,7 @@ const ClinicalSupplies = () => {
                     </p>
                   </div>
                   <div className="btn-doctor">
-                    <button className="show-doctor-btn" onClick={() => handleSubmit(row)}>Book Now</button>
+                    <button className="show-doctor-btn"  onClick={() => handleSubmit(row)}>Book Now</button>
                   </div>
                 </div>
               );

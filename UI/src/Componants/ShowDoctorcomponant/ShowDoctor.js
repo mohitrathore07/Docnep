@@ -66,8 +66,8 @@ const ShowDoctor = () => {
 
   const imgstyle = {
     width: "85%",
-    height: "460px",
-    objectFit: "cover", // Changed to cover for better image scaling
+    height: '63%',
+    objectFit: "contain", 
   };
 
   return (
@@ -82,7 +82,7 @@ const ShowDoctor = () => {
                   style={imgstyle} 
                   alt={`${row.DrName}'s profile`}
                 />
-                <div className="show-doctor-content">
+                <div className="show-doctor-content" >
                   <h2 className="dr-name" style={{ textTransform: 'uppercase' }}>{row.DrName}</h2>
                   <p className="dr-details">&#36; {row.DrConsultancyFee || 'Consultancy Fee Not Available'}</p>
                   <p className="dr-details dr-specialization">{row.DrSpecialization || 'Specialization Not Available'}</p>

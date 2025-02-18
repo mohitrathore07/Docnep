@@ -4,12 +4,13 @@ import './payment.css';
 import img1 from './madicineimg/498@2x.webp';
 import scanners from './madicineimg/499@2x.webp';
 import npximg from './madicineimg/500@2x.webp';
-import { useLocation } from 'react-router-dom';
-import { _addorderapiurl } from '../../Api.url';
+import { Navigate, useLocation } from 'react-router-dom';
+import { _adddoctorapiurl, _addorderapiurl } from '../../Api.url';
 
 const PaymentSection = () => {
     const location = useLocation();
     const { cartitems, totalAmount } = location.state || {};
+    const { _idDr, DrEmail , amount } = location.state || {};
     const [output, setOutput] = useState('');
 
     const saveOrder = async (items, amount) => {
@@ -33,9 +34,46 @@ const PaymentSection = () => {
         }
     };
 
+    const AppointmentBooking = async (_idDr, DrEmail , amount) => {
+        try {
+            const res = await axios.get(`${_adddoctorapiurl}fetch?_id=${_idDr}&email=${DrEmail}`);
+            const orderData = {
+                items: {
+                    ProductName: _idDr,
+                    DrName: res.data[0].DrName,
+                    DrPhone: res.data[0].DrPhone,
+                    DrEmail: res.data[0].DrEmail,
+                    quantity: 0,
+                    userEmail: localStorage.getItem('email'),
+                    collection_name: "Doctor_collection",
+                    _uid: _idDr,
+                },
+                    totalAmount: amount,
+            };
+            if(orderData) {   
+                try {
+                    await axios.post(_addorderapiurl + "save", orderData);
+                    Navigate('/');
+                } catch (error) {
+                    console.error(error);
+                    setOutput('Failed to place order');
+                }
+            }
+        } catch (error) {
+            console.error(error);
+            setOutput('Failed to get order details');
+        }
+    };
+
     const handleOrderSubmit = () => {
         if (cartitems && totalAmount) {
             saveOrder(cartitems, totalAmount);
+        }
+    };
+
+    const  handleAppointmentBooking = () => {
+        if (_idDr && amount && DrEmail) {
+            AppointmentBooking(_idDr, DrEmail, amount);
         }
     };
 
@@ -69,19 +107,28 @@ const PaymentSection = () => {
             </div>
 
             <div className='payments'>
-                {cartitems && totalAmount ? (
+                {(cartitems && totalAmount)|| (_idDr && DrEmail && amount)? (
                     <>
                         <h2 className='payment_caption' style={{ marginTop: '40px' }}>Pay By Scanning the Code Below</h2>
                         <div className='scanner_codes'>
                             <img src={scanners} alt='qrcodes' style={qrImg} />
                         </div>
                         <div>
-                            <h3>Amount to be paid: {totalAmount}</h3>
-                            {/* You can render cart items here if needed */}
+                            <h3>Amount to be paid: {totalAmount || amount}</h3>
+                            <br/>
                         </div>
-                        <button onClick={handleOrderSubmit} className="submit-order-btn">
+                        {
+                        cartitems && 
+                          <button onClick={handleOrderSubmit} className="header_links active" style={{border: 'none' , fontSize: '13px', fontWeight:'bold'}}>
                             Place Order
-                        </button>
+                          </button>
+                        }
+                        {
+                        _idDr && 
+                          <button onClick={handleAppointmentBooking} className=" header_links active" style={{border: 'none' , fontSize: '13px', fontWeight:'bold'}}>
+                            Book Appointment
+                          </button>
+                        }
                         {output && <p>{output}</p>}
                         <h2 className='payment_caption'>Or Continue to Payment Page</h2>
                         <div className='npx'>

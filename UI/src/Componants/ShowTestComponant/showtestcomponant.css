@@ -1,48 +1,38 @@
-.OurDoctor-container {
-  width: 90%; /* Adjusted for smaller screens */
-  max-width: 1200px; /* Limit maximum width */
-  margin: 50px auto;
-  padding: 0 20px; /* Add padding for smaller screens */
-}
-
-.our-doctor-heading {
-  display: flex;
-  flex-direction: column; /* Stack heading and filter section on smaller screens */
-  align-items: center; /* Center align items */
-  gap: 20px; /* Add gap between items */
-  margin-bottom: 20px;
-}
-
-.our-doctor-filtersection {
-  display: flex;
-  flex-direction: column; /* Stack filter label and select box on smaller screens */
-  align-items: center;
-  gap: 10px; /* Reduce gap for smaller screens */
-}
-
 .show-disease {
-  background-color: #fff; /* Change background color for better contrast */
-  border: 1px solid #ddd; /* Add border for better visibility */
-  border-radius: 10px; /* Add rounded corners */
-  padding: 20px; /* Add padding */
-  text-align: center; /* Center align content */
-  margin: 10px; /* Add margin for spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space evenly */
 }
 
 .get-appointment-show-test-content {
   margin: 15px 0;
-  text-align: center; /* Center align text */
+  text-align: center;
+  flex-grow: 1; /* Allow content to grow within the container */
+  overflow: hidden; /* Hide overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .getA-doctor-details {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 18px; /* Adjusted for smaller screens */
+  font-size: 18px;
   color: #333333;
-  line-height: 1.5; /* Adjusted line height */
-  margin: 10px 0; /* Add margin for better spacing */
+  line-height: 1.5;
+  margin: 10px 0;
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .getA-drName {
@@ -73,99 +63,45 @@
   color: #ba2264;
 }
 
-.slick-prev,
-.slick-next {
-  background-color: transparent !important;
-  position: absolute;
-  top: 50%;
-  z-index: 999;
-}
-
-.slick-prev {
-  left: 15px !important;
-}
-
-.slick-next {
-  right: 15px !important;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 30px !important;
-  color: black !important;
-}
-
-.slick-dots {
-  bottom: -30px;
-}
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .OurDoctor-container {
-    width: 95%; /* Adjust width for tablets */
-  }
-
-  .our-doctor-heading {
-    flex-direction: row; /* Revert to row layout for tablets */
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .our-doctor-filtersection {
-    flex-direction: row; /* Revert to row layout for tablets */
-    gap: 20px; /* Adjust gap */
+  .show-disease {
+    height: 450px; /* Adjust height for tablets */
   }
 
   .getA-doctor-details {
-    font-size: 16px; /* Adjust font size for tablets */
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-  .OurDoctor-container {
-    width: 100%; /* Full width for smaller screens */
-    padding: 0 10px; /* Reduce padding */
-  }
-
-  .our-doctor-heading {
-    flex-direction: column; /* Stack heading and filter section */
-    gap: 10px; /* Reduce gap */
-  }
-
-  .our-doctor-filtersection {
-    flex-direction: column; /* Stack filter label and select box */
-    gap: 10px; /* Reduce gap */
+  .show-disease {
+    height: 400px; /* Adjust height for smaller screens */
+    padding: 15px;
   }
 
   .getA-doctor-details {
-    font-size: 14px; /* Adjust font size for mobile */
-  }
-
-  .show-disease {
-    padding: 15px; /* Reduce padding */
+    font-size: 14px;
   }
 
   .show-doctor-btn {
-    font-size: 14px; /* Adjust button font size */
-    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .OurDoctor-container {
-    padding: 0 5px; /* Further reduce padding */
+  .show-disease {
+    height: 350px; /* Adjust height for very small screens */
+    padding: 10px;
   }
 
   .getA-doctor-details {
-    font-size: 12px; /* Adjust font size for very small screens */
-  }
-
-  .show-disease {
-    padding: 10px; /* Further reduce padding */
+    font-size: 12px;
   }
 
   .show-doctor-btn {
-    font-size: 12px; /* Adjust button font size */
-    padding: 6px 12px; /* Adjust button padding */
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }

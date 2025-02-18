@@ -14,7 +14,7 @@ const Home1 = () => {
                     <div className="home1">
                         <div className="home1_left">
                             <img src={Homeimg1} alt="" width={600} height={450} />
-                            <img src={Homebtn1} alt="" width={280} height={50} style={{ marginLeft: '0', }} className='btnimg' />
+                            <img src={Homebtn1} alt="" width={280} height={50} style={{ marginLeft: '0' }} className='btnimg' />
                         </div>
                         <div className="home1_right">
                             <img src={Homeimg2} alt="" width={600} height={600} />

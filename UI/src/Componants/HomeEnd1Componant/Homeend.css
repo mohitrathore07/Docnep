@@ -4,8 +4,8 @@
   display: flex;
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
   justify-content: center; /* Center content for smaller screens */
-  gap: 20px; /* Add spacing between elements */
-  margin-top: 100px;
+  gap: 0; /* Add spacing between elements */
+  margin-top: 150px;
   margin-bottom: 100px;
 }
 
@@ -17,9 +17,9 @@
 }
 
 .home1_img {
-  max-width: 90%; /* Ensure images don't overflow their containers */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Optional: Add rounded corners */
+  max-width: 80%; 
+  height: auto; 
+  border-radius: 10px; 
 }
 
 .home1_button {

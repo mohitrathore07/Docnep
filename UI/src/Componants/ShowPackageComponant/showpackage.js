@@ -75,8 +75,8 @@ const ShowPackage = () => {
   };
 
   const imgstyle = {
-    width: "378px",
-    height: "350px",
+    width: "358px",
+    height: "330px",
     objectFit: "content",
 
   };

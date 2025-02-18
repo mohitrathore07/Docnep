@@ -101,7 +101,8 @@ const ShowAll = () => {
         <div className='Show-all-content'>
 
         {
-           TestfilteredDetails.slice(0 , visibleTests).map((row)=>{
+           TestfilteredDetails.slice(0 , visibleTests).map((row, index)=>{
+            console.log(row);
               return ( 
             <div  className="show-disease">
 
@@ -111,15 +112,20 @@ const ShowAll = () => {
                   <img src={img} alt='img'></img> 
                   <div> 
                   <h2 className="show-content-Name" style={{fontSize: '27px'}}>Health Check Basic</h2>
-                  <Link style={{fontWeight:'bold', color: 'black'}}>Details</Link>
+                  <Link style={{fontWeight:'bold', color: 'black'}} >Details</Link>
                   </div>    
                 </div>
 
                 <div style={{display: 'flex' , gap: '75px'}}>
                   <p className="getA-doctor-details" style={{marginTop:'15px', fontWeight:'bold', }}>Fees: {row.Fees}</p>
-                  <Link to={`/testappointment/${row._id}`}>
+                  
+                { !localStorage.getItem('email') ? 
+                <Link to='/cart' state={{'TestName':row.TestName ,'collection_name':row.collection_name, 'test_id': row._id}}>
                   <button className="show-all-btn1" >Add Now</button>
-                  </Link>
+                </Link>
+                  :
+                  <button type='button' className="show-all-btn1" disabled >Login to Continue</button>
+                } 
                 </div>  
             </div>
             </div>

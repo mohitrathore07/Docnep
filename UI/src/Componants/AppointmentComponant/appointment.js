@@ -3,7 +3,7 @@ import { InlineWidget } from "react-calendly";
 import "./appointment.css";
 import img from "./img/400@2x.webp";
 import btn from "./img/402@2x.webp";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { _adddoctorapiurl } from "../../Api.url";
 
@@ -11,6 +11,8 @@ const Appointment = () => {
   const { _id } = useParams();
   const [drdetails, setDrDetails] = useState([]);
 
+
+  
   useEffect(() => {
     axios
       .get(`${_adddoctorapiurl}fetch?_id=${_id}`)
@@ -39,7 +41,7 @@ const Appointment = () => {
         <InlineWidget url="https://calendly.com/mohitrathore8269" />
       </div>
 
-      <div className="appointment-form">
+      {/* <div className="appointment-form">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSdoPna-4C8MSh1QXLQHAmaQOM11fxvYOcpmXvA18LrLb84hVg/viewform?embedded=true"
           width="700"
@@ -51,21 +53,25 @@ const Appointment = () => {
         >
           Loading…
         </iframe>
-      </div>
+      </div> */}
 
-      <div className="appointment-details">
-        {drdetails.map((row, index) => (
-          <div key={index} className="appointment-details-card">
-            <div className="appointment-detail">
-              <strong>Doctor Name:</strong> {row.DrName}
+    <div className="appointment-details">
+      {drdetails.map((row, index) => {
+        return (
+            <div key={index} className="appointment-details-card">
+              <div className="appointment-detail">
+                <strong>Doctor Name:</strong> {row.DrName}
+              </div>
+              <div className="appointment-detail">
+                <strong>Select Address:</strong> {row.DrAddress}
+              </div>
+              <Link to={`/payment`} state={{ "_idDr": row._id,"DrEmail": row.DrEmail, "amount": row.DrConsultancyFee}}>
+                <button className="payment-btn">Continue to Payment</button>
+              </Link>
             </div>
-            <div className="appointment-detail">
-              <strong>Select Address:</strong> {row.DrAddress}
-            </div>
-            <button className="payment-btn">Continue to Payment</button>
-          </div>
-        ))}
-      </div>
+          );
+        })}
+      </div>;
     </div>
   );
 };

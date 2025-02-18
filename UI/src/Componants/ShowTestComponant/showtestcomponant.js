@@ -119,8 +119,7 @@
           </div>
 
           <Slider {...settings}>
-
-            
+   
             {
             filteredDetails.map((row)=>{
                 return ( 

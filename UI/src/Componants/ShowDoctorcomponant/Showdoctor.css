@@ -1,5 +1,5 @@
 .showdoctor-container {
-  height: 850px;
+  height: auto;
   width: 100%;
   margin: 40px auto;
 }
@@ -92,4 +92,12 @@
 
 .show-doctor-content {
   height: 240px;
+}
+
+
+@media (max-width: 768px) {
+  .show-doctor-content {
+    height: 200px;
+  }
+  
 }

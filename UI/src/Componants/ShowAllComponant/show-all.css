@@ -1,19 +1,20 @@
 .Show-all-main {
-    width: 75%;
+    width: 90%; /* Adjusted width for better responsiveness */
     margin: auto;
     display: flex;
-    gap: 150px;
+    gap: 50px; /* Reduced gap for smaller screens */
+    flex-direction: column; /* Stack filters and content vertically on small screens */
 }
 
 .Show-all-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px ;
+    grid-template-columns: repeat(2, 1fr); /* Default to 2 columns */
+    gap: 20px; /* Reduced gap for smaller screens */
 }
 
 .get-appointment-show-all-content-div {
     width: 100%;
-    height: 150px;
+    height: auto; /* Adjusted height to be flexible */
     margin: 10px 0;
     border: 3px solid black; 
     border-left: none;
@@ -22,7 +23,6 @@
     background-color: #f1f2f2;
     padding-left: 10px;
 }
-
 
 .show-content-Name {
     font-family: 'xr10_Open Sans';
@@ -70,4 +70,62 @@
 
 .show-all-btns:hover {
     transform: scale(0.90);
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+    .Show-all-main {
+        width: 95%; /* Adjusted width for tablets */
+        gap: 30px; /* Reduced gap for tablets */
+    }
+
+    .Show-all-content {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .Show-all-main {
+        width: 100%; /* Full width for smaller tablets */
+        gap: 20px; /* Further reduced gap */
+    }
+
+    .Show-all-content {
+        grid-template-columns: 1fr; /* Switch to 1 column for smaller tablets */
+    }
+
+    .get-appointment-show-all-content-div {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center text */
+    }
+
+    .show-all-btn1 {
+        margin-left: 0; /* Remove left margin for smaller screens */
+        margin-top: 10px; /* Add top margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .Show-all-main {
+        gap: 10px; /* Minimal gap for mobile phones */
+    }
+
+    .Show-all-content {
+        gap: 10px; /* Minimal gap between items */
+    }
+
+    .show-content-Name {
+        font-size: 15px; /* Smaller font size for mobile */
+    }
+
+    .show-all-btn1 {
+        width: 70px; /* Smaller button width */
+        height: 28px; /* Smaller button height */
+    }
+
+    .show-all-btns {
+        width: 250px; /* Smaller button width for mobile */
+    }
 }

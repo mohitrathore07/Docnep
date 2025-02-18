@@ -20,8 +20,9 @@
   
   .get-appointment-show-doctor-content {
     margin: 15px 0;
-    height: 200px;
-    width: 350px;
+    height: auto;
+    width: 300px;
+    overflow: hidden;
   }
   
   

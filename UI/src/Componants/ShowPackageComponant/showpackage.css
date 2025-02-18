@@ -1,49 +1,50 @@
 .OurDoctor-container {
-  width: 90%; /* Adjusted for smaller screens */
-  max-width: 1200px; /* Limit maximum width */
+  width: 90%;
+  max-width: 1200px; 
   margin: 50px auto;
-  padding: 0 20px; /* Add padding for smaller screens */
+  padding: 0 20px; 
 }
 
 .our-doctor-heading {
   display: flex;
-  flex-direction: column; /* Stack heading and filter section on smaller screens */
-  align-items: center; /* Center align items */
-  gap: 20px; /* Add gap between items */
+  flex-direction: column; 
+  align-items: center; 
+  gap: 20px; 
   margin-bottom: 20px;
 }
 
 .our-doctor-filtersection {
   display: flex;
-  flex-direction: column; /* Stack filter label and select box on smaller screens */
+  flex-direction: column; 
   align-items: center;
-  gap: 10px; /* Reduce gap for smaller screens */
+  gap: 10px; 
 }
 
 .show-disease {
-  background-color: #fff; /* Change background color for better contrast */
-  border: 1px solid #ddd; /* Add border for better visibility */
-  border-radius: 10px; /* Add rounded corners */
-  padding: 20px; /* Add padding */
-  text-align: center; /* Center align content */
-  margin: 10px; /* Add margin for spacing */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  padding: 20px; 
+  text-align: center;
+  /* margin: 10px; */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .get-appointment-show-package-content {
   margin: 15px 0;
-  text-align: center; /* Center align text */
-  height: auto; /* Adjust height for smaller screens */
+  text-align: center; 
+  height: auto; 
 }
 
 .getA-doctor-details {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 18px; /* Adjusted for smaller screens */
+  font-size: 18px;
   color: #333333;
-  line-height: 1.5; /* Adjusted line height */
-  margin: 10px 0; /* Add margin for better spacing */
+  line-height: 1.5; 
+  margin: 10px 0; 
 }
 
 .getA-drName {
@@ -103,70 +104,70 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .OurDoctor-container {
-    width: 95%; /* Adjust width for tablets */
+    width: 95%; 
   }
 
   .our-doctor-heading {
-    flex-direction: row; /* Revert to row layout for tablets */
+    flex-direction: row; 
     justify-content: space-between;
     align-items: center;
   }
 
   .our-doctor-filtersection {
-    flex-direction: row; /* Revert to row layout for tablets */
-    gap: 20px; /* Adjust gap */
+    flex-direction: row; 
+    gap: 20px;
   }
 
   .getA-doctor-details {
-    font-size: 16px; /* Adjust font size for tablets */
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
   .OurDoctor-container {
-    width: 100%; /* Full width for smaller screens */
-    padding: 0 10px; /* Reduce padding */
+    width: 100%;
+    padding: 0 10px; 
   }
 
   .our-doctor-heading {
-    flex-direction: column; /* Stack heading and filter section */
-    gap: 10px; /* Reduce gap */
+    flex-direction: column; 
+    gap: 10px;
   }
 
   .our-doctor-filtersection {
-    flex-direction: column; /* Stack filter label and select box */
-    gap: 10px; /* Reduce gap */
+    flex-direction: column; 
+    gap: 10px;
   }
 
   .getA-doctor-details {
-    font-size: 14px; /* Adjust font size for mobile */
+    font-size: 14px; 
   }
 
   .show-disease {
-    padding: 15px; /* Reduce padding */
+    padding: 15px; 
   }
 
   .show-doctor-btn {
-    font-size: 14px; /* Adjust button font size */
-    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; 
+    padding: 8px 16px; 
   }
 }
 
 @media (max-width: 480px) {
   .OurDoctor-container {
-    padding: 0 5px; /* Further reduce padding */
+    padding: 0 5px; 
   }
 
   .getA-doctor-details {
-    font-size: 12px; /* Adjust font size for very small screens */
+    font-size: 12px; 
   }
 
   .show-disease {
-    padding: 10px; /* Further reduce padding */
+    padding: 10px; 
   }
 
   .show-doctor-btn {
-    font-size: 12px; /* Adjust button font size */
-    padding: 6px 12px; /* Adjust button padding */
+    font-size: 12px;
+    padding: 6px 12px;
   }
 }

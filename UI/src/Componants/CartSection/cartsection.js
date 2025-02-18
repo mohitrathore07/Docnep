@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import {
   _addcartapiurl,
@@ -11,11 +11,17 @@ import {
 } from "../../Api.url";
 
 const CartSection = () => {
+  const location = useLocation();
+  
   const [cartdetails, setCartDetails] = useState([]);
   const [cartitems, setCartItems] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("");
+
+  const { TestName, collection_name , test_id } = location.state || {};
+  
+  const loggedInUser = localStorage.getItem("email");
 
   useEffect(() => {
     const email = localStorage.getItem("email");
@@ -149,8 +155,23 @@ const CartSection = () => {
     cursor: "pointer",
   };
 
+  const emptycartstyle = {
+    textAlign: 'center',
+    margin:'150px 0',
+    fontWeight: 'bold'
+  }
   return (
-    <div className="manage-users-main" style={{ width: "100%" }}>
+
+    <>
+    {
+      !loggedInUser ? 
+      <div style={emptycartstyle}>Login To Continue..... &nbsp; &nbsp;&nbsp;&nbsp;
+        <Link to='/login'>
+            <button className="header_links active" style={{border:'none' , fontSize: '14px', width: '30%' , textAlign:'center'}}>Click Here to Login</button>
+        </Link>
+      </div> 
+      : 
+      <div className="manage-users-main" style={{ width: "100%" }}>
       <div
         style={{
           fontSize: "1.5rem",
@@ -213,6 +234,8 @@ const CartSection = () => {
         </div>
       </div>
     </div>
+     }
+    </>
   );
 };
 

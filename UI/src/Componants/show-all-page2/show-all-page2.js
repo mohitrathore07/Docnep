@@ -41,7 +41,7 @@ const ShowAllPage2 = () => {
 
   return (
      <>
-     <div className='Show-all-page2-main' style={{paddingTop:'150px'}}>
+     <div className='Show-all-page2-main'>
 
         <div className='Show-all-page2-filters'>
             <h2>Filters</h2>

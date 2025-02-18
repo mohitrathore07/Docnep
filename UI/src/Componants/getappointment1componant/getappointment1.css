@@ -73,9 +73,9 @@
 }
 
 @media (max-width: 992px) {
-    .get-appointment-1 {
-        height: 350px; /* Adjust height for medium screens */
-    }
+    /* .get-appointment-1 {
+        height: 350px; 
+    } */
 
     .get-appointment-1-content {
         top: 50%;
@@ -100,9 +100,9 @@
 }
 
 @media (max-width: 768px) {
-    .get-appointment-1 {
-        height: 300px; /* Adjust height for smaller screens */
-    }
+    /* .get-appointment-1 {
+        height: 300px; /* Adjust height for smaller screens 
+    } */
 
     .get-appointment-1-content {
         top: 50%;

@@ -1,19 +1,15 @@
 /* Base styles */
 .home1 {
-    width: 100%;
-    /* margin: auto; */
+    width: 100vw    ;
     display: flex;
     align-items: center;
     gap: 20px;
-    /* padding: 20px; */
     box-sizing: border-box;
 }
 
-.home1_left,
-.home1_right {
+.home1_left {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .home1_left img,
@@ -22,9 +18,6 @@
     height: auto;
 }
 
-.home1_left img:first-child {
-    /* margin-bottom: 20px; Space between Homeimg1 and Homebtn1 */
-}
 
 /* Responsive styles */
 @media (max-width: 1200px) {
@@ -34,15 +27,12 @@
         height: auto;
     }
 
-    .home1_left img:first-child {
-        margin-bottom: 15px; /* Adjust space between Homeimg1 and Homebtn1 */
-    }
 }
 
 @media (max-width: 992px) {
     .home1_left img,
     .home1_right img {
-        width: 80%; /* Further reduce image size */
+        width: 100%; /* Further reduce image size */
         height: auto;
     }
 
@@ -52,11 +42,6 @@
 }
 
 @media (max-width: 768px) {
-    .home1_left img,
-    .home1_right img {
-        width: 70%; /* Reduce image size for tablets */
-        height: auto;
-    }
 
     .home1_left img:first-child {
         margin-bottom: 5px; /* Adjust space between Homeimg1 and Homebtn1 */

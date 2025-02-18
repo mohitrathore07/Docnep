@@ -39,7 +39,7 @@ const ShowDisease = () => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: DiseaseDetails.length > 1,
     autoplay: true,
     speed: 500,
@@ -73,6 +73,7 @@ const ShowDisease = () => {
     objectFit: "content",
   };
 
+
   return (
     <>
       <div className="showdisease-container">
@@ -82,13 +83,12 @@ const ShowDisease = () => {
             DiseaseDetails.map((row, index) => (
               <div key={index} style={{ backgroundColor: 'red' }} className="show-disease">
 
-                {/* <img src={`/assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" /> */}
                 <img src={`${process.env.PUBLIC_URL}/assets/uploads/diseaseimage/${row.Diseaseiconnm}`} style={imgstyle} alt="disease" />
 
 
                 <div className="show-disease-content">
-                  <h2 className="dr-name">{row.DiseaseName}</h2>
-                  <p className="dr-details">Details: {row.Details}</p>
+                  <h2 className="dr-name" style={{ height: '40px' , overflow: 'hidden' }}>{row.DiseaseName}</h2>
+                  <p className="dr-details" style={{ height: '40px' , overflow: 'hidden' }}>Details: {row.Details}</p>
                 </div>
                 <div className="btn-doctor">
                   <Link to='/getappointment'>

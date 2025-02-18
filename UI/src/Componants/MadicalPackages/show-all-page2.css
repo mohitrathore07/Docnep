@@ -1,9 +1,9 @@
 .Show-all-page2-main {
     width: 85%;
-    margin: auto;
+    margin:30px auto;
     display: flex;
     height: auto;
-    gap: 100px;
+    /* gap: 100px; */
 }
 
 

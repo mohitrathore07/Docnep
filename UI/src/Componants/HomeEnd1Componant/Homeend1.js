@@ -6,17 +6,18 @@ import { Link } from 'react-router-dom';
 
 const HomeEnd1 = () => {
   return (
-    <div className='home1'>
-      <div className='home1_left'>
-        <img src={homeendimg1} alt='' className='home1_img' />
-      </div>
-      <div className='home1_right'>
-        <img src={homeendimg2} alt='' className='home1_img' />
-        <Link to='/clinicalsuplies'>
-          <img src={homeendimg3} alt='' className='home1_button' />
-        </Link>
-      </div>
-    </div>
+    // <div className='home1'>
+    //   <div className='home1_left'>
+    //     <img src={homeendimg1} alt='' className='home1_img' style={{maxWidth:'70%'}} />
+    //   </div>
+    //   <div className='home1_right'>
+    //     <img src={homeendimg2} alt='' className='home1_img' />
+    //     <Link to='/clinicalsuplies'>
+    //       <img src={homeendimg3} alt='' className='home1_button' />
+    //     </Link>
+    //   </div>
+    // </div>
+    <></>
   );
 };
 
